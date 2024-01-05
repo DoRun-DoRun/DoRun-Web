@@ -1,4 +1,20 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+
+const createPxEntries = (size: number) => {
+  return {
+    ...Array.from(Array(size + 1)).reduce((accumulator, _, i) => {
+      return { ...accumulator, [`${i}px`]: `${i}px` };
+    }),
+  };
+};
+
+const createRemEntries = (size: number) => {
+  return {
+    ...Array.from(Array(size + 1)).reduce((accumulator, _, i) => {
+      return { ...accumulator, [i]: `${i * 0.0625}rem` };
+    }),
+  };
+};
 
 const config: Config = {
   content: [
@@ -8,13 +24,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontSize: { ...createPxEntries(50), ...createRemEntries(50) },
+      spacing: { ...createPxEntries(100), ...createRemEntries(100) },
+      colors: {
+        'secondary-300': '#A5B9FF',
+        'secondary-200': '#FFF8B8',
+        'secondary-100': '#FFA63D',
+        'primary-300': '#9DB8F9',
+        'primary-200': '#DFEAFF',
+        'primary-100': '#648CF3',
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
