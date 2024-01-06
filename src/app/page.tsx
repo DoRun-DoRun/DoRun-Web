@@ -5,6 +5,8 @@ import playStoreLogo from '/public/images/play_store_logo.png';
 import hammer from '/public/images/hammer.png';
 import phone1 from '/public/images/play_image_1.png';
 import phone2 from '/public/images/play_image_2.png';
+import two_bean from '/public/images/two_bean.png';
+import image4 from '/public/images/img4.png';
 import Link from 'next/link';
 import { MdCheckCircle } from 'react-icons/md';
 import { MdMoreHoriz } from 'react-icons/md';
@@ -24,9 +26,9 @@ export default function Home() {
               <div className="p-12 pl-20 pr-24 items-center bg-white rounded-lg flex gap-8 shadow-md">
                 <Image
                   src={appleLogo}
-                  alt="AppleStore을 나타내는 로고입니다.
-"
-                  className="w-28"></Image>
+                  alt="AppleStore을 나타내는 로고입니다."
+                  className="w-28"
+                />
                 <p className="text-24 font-bold">App Store</p>
               </div>
             </Link>
@@ -34,7 +36,8 @@ export default function Home() {
               <Image
                 src={playStoreLogo}
                 alt="PlayStore을 나타내는 로고입니다."
-                className="w-28"></Image>
+                className="w-28"
+              />
               <p className="text-24 font-bold">Play Store</p>
             </div>
           </div>
@@ -67,7 +70,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-86">
-            <Image src={phone1} alt="" className="pl-130" />
+            <Image src={phone1} alt="" className="ml-100 w-5/6" />
             <div className="flex flex-col justify-center gap-25">
               <h4 className="text-h4 font-h4 text-primary-1">도전과 경쟁</h4>
               <h3 className="text-h3 font-h3">친구들과 함께 도전하세요!</h3>
@@ -96,10 +99,9 @@ export default function Home() {
               <Image
                 src={hammer}
                 alt=""
-                className="w-256 absolute top-40 rotate-28"
-                style={{ right: -40 }}
+                className="w-256 absolute top-40 right-40 rotate-28"
               />
-              <Image src={phone2} alt="" className="relative top-176" />
+              <Image src={phone2} alt="" className="relative top-176 w-5/6" />
             </div>
           </div>
         </div>
@@ -119,10 +121,10 @@ export default function Home() {
                 성공을 기록하고 친구들과 추억해 보세요.
               </p>
             </div>
-            <div></div>
+            <Image src={two_bean} alt="" className="w-4/5" />
           </div>
           <div className="grid grid-cols-2 gap-86">
-            <Image src={phone1} alt="" className="pl-130" />
+            <Image src={image4} alt="" className="w-4/5" />
             <div className="flex flex-col justify-center gap-25">
               <h4 className="text-h4 font-h4 text-primary-1">한 줄 일기</h4>
               <h3 className="text-h3 font-h3">
