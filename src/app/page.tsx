@@ -44,6 +44,7 @@ export default function Home() {
             모아보세요.
           </h2>
         </div>
+        <div className="bg-glass rounded-lg">오늘은 한 걸음 더!</div>
       </div>
       <div className="h-1440">
         <div className="inner pt-176 gap-144">
