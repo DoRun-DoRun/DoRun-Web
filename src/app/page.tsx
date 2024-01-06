@@ -1,11 +1,12 @@
 import Image from 'next/image';
-import headerImg from '/public/images/web_header1.png';
+import headerImg from '/public/images/web_header_1.png';
 
 export default function Home() {
   return (
-    <>
-      Hello, Nextjs!
-      <Image src={headerImg} alt="" className="header-img" />
-    </>
+    <div>
+      <div className="bg-bg h-full">
+        <Image src={headerImg} alt="" className="" />
+      </div>
+    </div>
   );
 }
