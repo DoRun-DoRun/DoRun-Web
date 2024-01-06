@@ -4,6 +4,7 @@ import { Noto_Sans_KR } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '/public/images/title.png';
+import Logo_Gray from '/public/images/title_gray.png';
 
 const notoSansKr = Noto_Sans_KR({
   weight: ['400', '500', '700'],
@@ -60,7 +61,7 @@ const Header = () => {
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
-            <Image src={Logo} alt="두런두런" />
+            <Image src={Logo} alt="두런두런" className="w-130" />
           </Link>
           <NavBar />
         </div>
@@ -75,7 +76,7 @@ const Footer = () => {
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
-            <Image src={Logo} alt="두런두런" />
+            <Image src={Logo_Gray} alt="두런두런" className="w-130" />
           </Link>
           <NavBar />
         </div>

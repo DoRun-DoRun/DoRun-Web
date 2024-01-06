@@ -2,10 +2,14 @@ import Image from 'next/image';
 import headerImg from '/public/images/web_header_1.png';
 import appleLogo from '/public/images/apple_store_logo.png';
 import playStoreLogo from '/public/images/play_store_logo.png';
+import hammer from '/public/images/hammer.png';
+import phone1 from '/public/images/play_image_1.png';
+import phone2 from '/public/images/play_image_2.png';
+import two_bean from '/public/images/two_bean.png';
+import image4 from '/public/images/img4.png';
 import Link from 'next/link';
 import { MdCheckCircle } from 'react-icons/md';
 import { MdMoreHoriz } from 'react-icons/md';
-import phone1 from '/public/images/play_image_1.png';
 
 export default function Home() {
   return (
@@ -22,9 +26,9 @@ export default function Home() {
               <div className="p-12 pl-20 pr-24 items-center bg-white rounded-lg flex gap-8 shadow-md">
                 <Image
                   src={appleLogo}
-                  alt="AppleStore을 나타내는 로고입니다.
-"
-                  className="w-28"></Image>
+                  alt="AppleStore을 나타내는 로고입니다."
+                  className="w-28"
+                />
                 <p className="text-24 font-bold">App Store</p>
               </div>
             </Link>
@@ -32,7 +36,8 @@ export default function Home() {
               <Image
                 src={playStoreLogo}
                 alt="PlayStore을 나타내는 로고입니다."
-                className="w-28"></Image>
+                className="w-28"
+              />
               <p className="text-24 font-bold">Play Store</p>
             </div>
           </div>
@@ -66,7 +71,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-86">
-            <Image src={phone1} alt="" className="pl-130" />
+            <Image src={phone1} alt="" className="ml-100 w-5/6" />
             <div className="flex flex-col justify-center gap-25">
               <h4 className="text-h4 font-h4 text-primary-1">도전과 경쟁</h4>
               <h3 className="text-h3 font-h3">친구들과 함께 도전하세요!</h3>
@@ -79,9 +84,62 @@ export default function Home() {
         </div>
       </div>
       <div className="h-928 bg-primary-2">
-        <div></div>
+        <div className="inner">
+          <div className="grid grid-cols-2 gap-86">
+            <div className="flex flex-col justify-center gap-25">
+              <h3 className="font-h3 text-h3">
+                친구들과 경쟁하며
+                <br /> 챌린지를 수행하세요!
+              </h3>
+              <p className="font-body1 text-body1">
+                챌린지의 진행도가 승부욕을 자극하여
+                <br /> 더욱 즐거운 챌린지가 될 거예요!
+              </p>
+            </div>
+            <div>
+              <Image
+                src={hammer}
+                alt=""
+                className="w-256 absolute top-40 right-40 rotate-28"
+              />
+              <Image src={phone2} alt="" className="relative top-176 w-5/6" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="h-1600 "></div>
+      <div className="h-1600 ">
+        <div className="inner pt-360 gap-144">
+          <div className="grid grid-cols-2 gap-90">
+            <div className="flex flex-col gap-25">
+              <h4 className="text-h4 font-h4 text-primary-1">챌린지 공유</h4>
+              <h3 className="text-h3 font-h3">
+                챌린지 완수하고
+                <br /> 친구들에게 자랑하세요!
+              </h3>
+              <p className="text-body1 font-body1 text-gray-1">
+                챌린지를 완수하면 주어지는 이미지를 통해 완수한 챌린지를
+                인증하고 공유할 수 있어요. 매일 작성하는 한 줄 일기로 오늘의
+                성공을 기록하고 친구들과 추억해 보세요.
+              </p>
+            </div>
+            <Image src={two_bean} alt="" className="w-4/5" />
+          </div>
+          <div className="grid grid-cols-2 gap-86">
+            <Image src={image4} alt="" className="w-4/5" />
+            <div className="flex flex-col justify-center gap-25">
+              <h4 className="text-h4 font-h4 text-primary-1">한 줄 일기</h4>
+              <h3 className="text-h3 font-h3">
+                하루하루의 성공을
+                <br /> 기록하고 공유하세요!
+              </h3>
+              <p className="text-body1 font-body1 text-gray-1">
+                한 줄 일기를 통해 성공한 하루를 추억하고 친구들과 공유하여 나눌
+                수 있어요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
