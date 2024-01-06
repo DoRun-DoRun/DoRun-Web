@@ -3,6 +3,8 @@ import headerImg from '/public/images/web_header_1.png';
 import appleLogo from '/public/images/apple_store_logo.png';
 import playStoreLogo from '/public/images/play_store_logo.png';
 import Link from 'next/link';
+import { MdCheckCircle } from 'react-icons/md';
+import { MdMoreHoriz } from 'react-icons/md';
 
 export default function Home() {
   return (
@@ -56,9 +58,9 @@ export default function Home() {
             </div>
             <div>
               <div className="gap-3 w-130 bg-glass01 py-5 px-4 flex justify-start items-center rounded-2xl shadow-glass">
-                <div>v</div>
+                <MdCheckCircle size="32" color="#648CF3" />
                 <p className="text-24 font-medium flex-1">챌린지 아이템</p>
-                <div>...</div>
+                <MdMoreHoriz size="32" color="#B5B5B5" />
               </div>
               <div className="w-130 bg-primary-1 py-5 px-4 flex rounded-2xl shadow-glass"></div>
             </div>
