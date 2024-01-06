@@ -36,6 +36,7 @@ const config: Config = {
       },
       spacing: {
         '130': '32.5rem',
+        '360': '90rem',
       },
       fontWeight: {
         h1: '700',

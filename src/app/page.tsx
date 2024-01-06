@@ -44,7 +44,7 @@ export default function Home() {
           </h2>
         </div>
       </div>
-      <div>
+      <div className="h-360">
         <div className="inner pt-44">
           <div className="grid grid-cols-2 gap-10">
             <div>
@@ -56,15 +56,11 @@ export default function Home() {
                 루틴으로 만들어보세요!
               </p>
             </div>
-            <div>
-              <div className="relative">
-                <div className="gap-3 w-130 bg-glass1 py-5 px-4 flex justify-start items-center rounded-2xl shadow-glass z-10 absolute">
-                  <MdCheckCircle size="32" color="#648CF3" />
-                  <p className="text-24 font-medium flex-1">챌린지 아이템</p>
-                  <MdMoreHoriz size="32" color="#B5B5B5" />
-                </div>
-                <div className="w-130 h-16 bg-primary3 py-3 px-4 rounded-2xl absolute top-7 left-5 z-0"></div>
-              </div>
+            <div className="flex flex-col gap-10">
+              <ChallengeItem background />
+              <ChallengeItem />
+              <ChallengeItem background />
+              <ChallengeItem />
             </div>
           </div>
         </div>
@@ -72,3 +68,18 @@ export default function Home() {
     </div>
   );
 }
+
+const ChallengeItem = ({ background }: { background?: boolean }) => {
+  return (
+    <div className={`relative ${!background && 'self-end'}`}>
+      <div className="gap-3 w-130 bg-glass1 py-5 px-4 flex justify-start items-center rounded-2xl shadow-glass z-10 relative">
+        <MdCheckCircle size="32" color="#648CF3" />
+        <p className="text-24 font-medium flex-1">챌린지 아이템</p>
+        <MdMoreHoriz size="32" color="#B5B5B5" />
+      </div>
+      {background && (
+        <div className="w-130 h-16 bg-primary3 py-3 px-4 rounded-2xl absolute top-7 left-5 z-0"></div>
+      )}
+    </div>
+  );
+};
