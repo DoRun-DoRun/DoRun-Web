@@ -55,12 +55,14 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <div className="gap-3 w-130 bg-glass01 py-5 px-4 flex justify-start items-center rounded-2xl shadow-glass">
-                <div>v</div>
-                <p className="text-24 font-medium flex-1">챌린지 아이템</p>
-                <div>...</div>
+              <div className="relative">
+                <div className="gap-3 w-130 bg-glass1 py-5 px-4 flex justify-start items-center rounded-2xl shadow-glass z-10 absolute">
+                  <div>v</div>
+                  <p className="text-24 font-medium flex-1">챌린지 아이템</p>
+                  <div>...</div>
+                </div>
+                <div className="w-130 h-16 bg-primary3 py-3 px-4 rounded-2xl absolute top-7 left-5 z-0"></div>
               </div>
-              <div className="w-130 bg-primary-1 py-5 px-4 flex rounded-2xl shadow-glass"></div>
             </div>
           </div>
         </div>

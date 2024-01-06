@@ -64,8 +64,10 @@ const config: Config = {
         rectangle01: '2px 2px 4px 0px rgba(0, 0, 0, 0.30)',
       },
       backgroundImage: {
-        glass01:
+        glass1:
           'linear-gradient(102deg, #FFF 3.78%, rgba(255, 255, 255, 0.40) 106.05%)',
+        primary3:
+          'linear-gradient(276deg, #1645BE -54.21%, #648CF3 68.91%, #9DB8F9 136.14%)',
       },
     },
   },
