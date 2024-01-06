@@ -42,7 +42,6 @@ const config: Config = {
         body1: '300',
         subTitle1: '300',
       },
-      spacing: { ...createPxEntries(100), ...createRemEntries(100) },
       colors: {
         'secondary-300': '#A5B9FF',
         'secondary-200': '#FFF8B8',
