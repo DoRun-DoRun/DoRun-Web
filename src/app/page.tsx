@@ -14,13 +14,13 @@ import { MdMoreHoriz } from 'react-icons/md';
 export default function Home() {
   return (
     <div>
-      <div className="bg-bg h-screen pt-208">
+      <div className="bg-bg h-screen">
         <Image
           src={headerImg}
           alt="별이 반짝이는 겨울 밤의 산 배경이미지입니다. 하늘색과 남색의 산들과 눈이 더해져 차가운 겨울 느낌을 줍니다."
           className="w-screen absolute bottom-0"
         />
-        <div className="inner gap-16">
+        <div className="inner gap-16 h-screen  pt-208">
           <div className="flex gap-16">
             <Link href="https://www.naver.com" target="_blank">
               <div className="p-12 pl-20 pr-24 items-center bg-white rounded-lg flex gap-8 shadow-md">
@@ -48,8 +48,16 @@ export default function Home() {
             두런두런을 통해 친구들과 함께 도전하고 하루하루 작은 성공을
             모아보세요.
           </h2>
+          <BoxItem bottom={406} left={87}>
+            오늘은 한 걸음 더!
+          </BoxItem>
+          <BoxItem bottom={280} left={495}>
+            챌린지를 생성해주세요!
+          </BoxItem>
+          <BoxItem bottom={484} left={1077}>
+            같이 달려보자!
+          </BoxItem>
         </div>
-        <div className="bg-glass rounded-lg">오늘은 한 걸음 더!</div>
       </div>
       <div className="h-1440">
         <div className="inner pt-176 gap-144">
@@ -155,6 +163,24 @@ const ChallengeItem = ({ background }: { background?: boolean }) => {
       {background && (
         <div className="w-520 h-76 bg-primary3 px-16 rounded-2xl absolute top-28 left-20s z-0"></div>
       )}
+    </div>
+  );
+};
+
+const BoxItem = ({
+  children,
+  bottom,
+  left,
+}: {
+  children: string;
+  bottom: number;
+  left: number;
+}) => {
+  return (
+    <div
+      className="bg-glass1 rounded-lg w-285 py-28 shadow-rectangle01 flex justify-center absolute"
+      style={{ bottom: `${bottom}px`, left: `${left}px` }}>
+      <p className=" text-primary-1 text-22 font-bold leading-6">{children}</p>
     </div>
   );
 };
