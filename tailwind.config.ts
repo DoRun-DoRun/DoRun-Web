@@ -34,6 +34,9 @@ const config: Config = {
         ...createPxEntries(50),
         ...createRemEntries(50),
       },
+      spacing: {
+        '130': '32.5rem',
+      },
       fontWeight: {
         h1: '700',
         h2: '400',
@@ -55,6 +58,14 @@ const config: Config = {
         'gray-6': '#d5d5d5',
         'gray-7': '#efefef',
         bg: '#d3eff3',
+      },
+      boxShadow: {
+        glass: '0px 4px 30px 0px rgba(0, 0, 0, 0.15)',
+        rectangle01: '2px 2px 4px 0px rgba(0, 0, 0, 0.30)',
+      },
+      backgroundImage: {
+        glass01:
+          'linear-gradient(102deg, #FFF 3.78%, rgba(255, 255, 255, 0.40) 106.05%)',
       },
     },
   },
