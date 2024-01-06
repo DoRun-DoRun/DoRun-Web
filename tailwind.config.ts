@@ -24,7 +24,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontSize: { ...createPxEntries(50), ...createRemEntries(50) },
+      fontSize: {
+        h1: '3.75rem', // 60px
+        h2: '2rem', // 32px
+        h3: '3.125rem', // 50px
+        h4: '1.875rem', // 30px
+        body1: '1.75rem', // 28px
+        subTitle1: '1.25rem', // 20px
+        ...createPxEntries(50),
+        ...createRemEntries(50),
+      },
+      fontWeight: {
+        h1: '700',
+        h2: '400',
+        h3: '700',
+        h4: '700',
+        body1: '300',
+        subTitle1: '300',
+      },
       spacing: { ...createPxEntries(100), ...createRemEntries(100) },
       colors: {
         'secondary-300': '#A5B9FF',
