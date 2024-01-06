@@ -57,7 +57,7 @@ const NavBar = () => {
 
 const Header = () => {
   return (
-    <div className="absolute z-20 flex flex-col justify-center w-screen bg-white h-80">
+    <div className="fixed z-20 flex items-center w-screen bg-white h-80">
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
@@ -73,7 +73,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center w-screen h-360 bg-gray-6">
+    <div className="flex items-center h-360 bg-gray-6">
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
