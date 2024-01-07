@@ -75,7 +75,7 @@ const config: Config = {
       },
       boxShadow: {
         glass: '0px 4px 30px 0px rgba(0, 0, 0, 0.15)',
-        rectangle01: '2px 2px 4px 0px rgba(0, 0, 0, 0.30)',
+        rectangle: '2px 2px 4px 0px rgba(0, 0, 0, 0.30)',
       },
       backgroundImage: {
         glass1:

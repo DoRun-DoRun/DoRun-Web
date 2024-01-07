@@ -14,31 +14,31 @@ import { MdMoreHoriz } from 'react-icons/md';
 export default function Home() {
   return (
     <div>
-      <div className="bg-bg h-screen">
+      <div className="h-screen bg-bg">
         <Image
           src={headerImg}
           alt="별이 반짝이는 겨울 밤의 산 배경이미지입니다. 하늘색과 남색의 산들과 눈이 더해져 차가운 겨울 느낌을 줍니다."
-          className="w-screen absolute bottom-0"
+          className="absolute bottom-0 w-screen"
         />
-        <div className="inner gap-16 h-screen  pt-208">
+        <div className="h-screen gap-16 inner pt-208">
           <div className="flex gap-16">
             <Link href="https://www.naver.com" target="_blank">
-              <div className="p-12 pl-20 pr-24 items-center bg-white rounded-lg flex gap-8 shadow-md">
+              <div className="flex items-center gap-8 p-12 pl-20 pr-24 bg-white rounded-lg shadow-glass">
                 <Image
                   src={appleLogo}
                   alt="AppleStore을 나타내는 로고입니다."
                   className="w-28"
                 />
-                <p className="text-24 font-bold">App Store</p>
+                <p className="font-bold text-24">App Store</p>
               </div>
             </Link>
-            <div className="p-12 pl-20 pr-24 items-center bg-white rounded-lg flex gap-8 shadow-md">
+            <div className="flex items-center gap-8 p-12 pl-20 pr-24 bg-white rounded-lg shadow-glass">
               <Image
                 src={playStoreLogo}
                 alt="PlayStore을 나타내는 로고입니다."
                 className="w-28"
               />
-              <p className="text-24 font-bold">Play Store</p>
+              <p className="font-bold text-24">Play Store</p>
             </div>
           </div>
           <h1 className="text-h1 font-h1">
@@ -48,20 +48,20 @@ export default function Home() {
             두런두런을 통해 친구들과 함께 도전하고 하루하루 작은 성공을
             모아보세요.
           </h2>
-          <BoxItem bottom={406} left={87}>
+          <BoxItem top={62} left={10}>
             오늘은 한 걸음 더!
           </BoxItem>
-          <BoxItem bottom={280} left={495}>
+          <BoxItem top={72} right={40}>
             챌린지를 생성해주세요!
           </BoxItem>
-          <BoxItem bottom={484} left={1077}>
+          <BoxItem top={52} right={20}>
             같이 달려보자!
           </BoxItem>
         </div>
       </div>
-      <div className="h-1440">
+      <div className="h-full lg:h-1440">
         <div className="inner pt-176 gap-144">
-          <div className="grid grid-cols-2 gap-90">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-90">
             <div className="flex flex-col gap-25">
               <h4 className="text-h4 font-h4 text-primary-1">목표설정</h4>
               <h3 className="text-h3 font-h3">목표를 간편하게 관리하세요!</h3>
@@ -78,9 +78,11 @@ export default function Home() {
               <ChallengeItem />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-86">
-            <Image src={phone1} alt="" className="ml-100 w-5/6" />
-            <div className="flex flex-col justify-center gap-25">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-86">
+            <div className="flex justify-center order-2">
+              <Image src={phone1} alt="" className="w-3/4 lg:w-5/6 lg:ml-100" />
+            </div>
+            <div className="flex flex-col justify-center gap-25 lg:order-2">
               <h4 className="text-h4 font-h4 text-primary-1">도전과 경쟁</h4>
               <h3 className="text-h3 font-h3">친구들과 함께 도전하세요!</h3>
               <p className="text-body1 font-body1 text-gray-1">
@@ -91,9 +93,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-928 bg-primary-2">
-        <div className="inner">
-          <div className="grid grid-cols-2 gap-86">
+      <div className="h-full lg:h-928 bg-primary-2">
+        <div className="inner pt-176 lg:pt-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-86">
             <div className="flex flex-col justify-center gap-25">
               <h3 className="font-h3 text-h3">
                 친구들과 경쟁하며
@@ -104,20 +106,24 @@ export default function Home() {
                 <br /> 더욱 즐거운 챌린지가 될 거예요!
               </p>
             </div>
-            <div>
+            <div className="relative flex justify-center lg:w-full">
               <Image
                 src={hammer}
                 alt=""
-                className="w-256 absolute top-40 right-40 rotate-28"
+                className="absolute right-0 hidden w-256 lg:block top-40 rotate-28"
               />
-              <Image src={phone2} alt="" className="relative top-176 w-5/6" />
+              <Image
+                src={phone2}
+                alt=""
+                className="relative w-3/4 lg:w-5/6 lg:top-176 lg:right-0"
+              />
             </div>
           </div>
         </div>
       </div>
-      <div className="h-1600 ">
+      <div className="h-full lg:h-1600">
         <div className="inner pt-360 gap-144">
-          <div className="grid grid-cols-2 gap-90">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-90">
             <div className="flex flex-col gap-25">
               <h4 className="text-h4 font-h4 text-primary-1">챌린지 공유</h4>
               <h3 className="text-h3 font-h3">
@@ -130,11 +136,15 @@ export default function Home() {
                 성공을 기록하고 친구들과 추억해 보세요.
               </p>
             </div>
-            <Image src={two_bean} alt="" className="w-4/5" />
+            <div className="flex justify-center">
+              <Image src={two_bean} alt="" className="w-3/4 lg:w-4/5" />
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-86">
-            <Image src={image4} alt="" className="w-4/5" />
-            <div className="flex flex-col justify-center gap-25">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-86">
+            <div className="flex justify-center order-2">
+              <Image src={image4} alt="" className="w-3/4 lg:w-4/5" />
+            </div>
+            <div className="flex flex-col justify-center gap-25 lg:order-2">
               <h4 className="text-h4 font-h4 text-primary-1">한 줄 일기</h4>
               <h3 className="text-h3 font-h3">
                 하루하루의 성공을
@@ -154,14 +164,14 @@ export default function Home() {
 
 const ChallengeItem = ({ background }: { background?: boolean }) => {
   return (
-    <div className={`relative ${!background && 'self-end'}`}>
-      <div className="gap-12 w-520 bg-glass1 py-20 px-16 flex justify-start items-center rounded-2xl shadow-glass z-10 relative">
+    <div className={`relative w-5/6 ${!background && 'self-end'}`}>
+      <div className="relative z-10 flex items-center gap-12 py-20 -16 bg-glass1 rounded-2xl shadow-glass">
         <MdCheckCircle size="32" color="#648CF3" />
-        <p className="text-24 font-medium flex-1">챌린지 아이템</p>
+        <p className="flex-1 font-medium text-24">챌린지 아이템</p>
         <MdMoreHoriz size="32" color="#B5B5B5" />
       </div>
       {background && (
-        <div className="w-520 h-76 bg-primary3 px-16 rounded-2xl absolute top-28 left-20s z-0"></div>
+        <div className="absolute z-0 w-full px-16 h-76 bg-primary3 rounded-2xl top-28 left-20"></div>
       )}
     </div>
   );
@@ -169,18 +179,24 @@ const ChallengeItem = ({ background }: { background?: boolean }) => {
 
 const BoxItem = ({
   children,
-  bottom,
+  top,
   left,
+  right,
 }: {
   children: string;
-  bottom: number;
-  left: number;
+  top: number;
+  left?: number;
+  right?: number;
 }) => {
   return (
     <div
-      className="bg-glass1 rounded-lg w-285 py-28 shadow-rectangle01 flex justify-center absolute"
-      style={{ bottom: `${bottom}px`, left: `${left}px` }}>
-      <p className=" text-primary-1 text-22 font-bold leading-6">{children}</p>
+      className="absolute flex justify-center rounded-lg bg-glass1 w-285 py-28 shadow-rectangle"
+      style={{
+        top: `${top}%`,
+        left: `${left}%`,
+        right: `${right}%`,
+      }}>
+      <p className="font-bold leading-6 text-primary-1 text-22">{children}</p>
     </div>
   );
 };

@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '/public/images/title.png';
 import Logo_Gray from '/public/images/title_gray.png';
+import Head from 'next/head';
+import { NavIcon } from '@/components/nav-icon';
 
 const notoSansKr = Noto_Sans_KR({
   weight: ['400', '500', '700'],
@@ -43,12 +45,10 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex flex-row gap-48">
+    <div className="flex-row hidden gap-48 md:flex">
       {category.map((nav, idx) => (
-        <Link href={nav.link}>
-          <div key={idx} className="text-gray-4">
-            {nav.name}
-          </div>
+        <Link href={nav.link} key={idx}>
+          <div className="text-gray-4">{nav.name}</div>
         </Link>
       ))}
     </div>
@@ -57,13 +57,14 @@ const NavBar = () => {
 
 const Header = () => {
   return (
-    <div className="flex flex-col w-full h-80 justify-center absolute bg-white">
+    <div className="fixed z-20 flex items-center w-screen bg-white h-80">
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
             <Image src={Logo} alt="두런두런" className="w-130" />
           </Link>
           <NavBar />
+          <NavIcon />
         </div>
       </div>
     </div>
@@ -72,7 +73,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full h-360 justify-center bg-gray-6">
+    <div className="flex items-center h-360 bg-gray-6">
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
