@@ -45,7 +45,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="md:flex-row gap-48">
+    <div className="flex-row gap-48 hidden md:flex">
       {category.map((nav, idx) => (
         <Link href={nav.link} key={idx}>
           <div className="text-gray-4">{nav.name}</div>
