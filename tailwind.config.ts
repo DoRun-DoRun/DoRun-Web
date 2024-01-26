@@ -31,8 +31,8 @@ const config: Config = {
         h4: '1.875rem', // 30px
         body1: '1.75rem', // 28px
         subTitle1: '1.25rem', // 20px
-        ...createPxEntries(50),
-        ...createRemEntries(50),
+        ...createPxEntries(100),
+        ...createRemEntries(100),
       },
       spacing: {
         ...createPxEntries(100),

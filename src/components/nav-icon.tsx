@@ -37,7 +37,7 @@ export const NavIcon = () => {
         </div>
       </div>
       <div onClick={() => setIsOpen((prev) => !prev)}>
-        <MdMenu size="32" color="#000"></MdMenu>
+        <MdMenu size="24" color="#000"></MdMenu>
       </div>
     </div>
   );

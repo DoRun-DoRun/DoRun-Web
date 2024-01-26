@@ -45,7 +45,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex-row hidden gap-48 md:flex">
+    <div className="md:flex-row gap-48">
       {category.map((nav, idx) => (
         <Link href={nav.link} key={idx}>
           <div className="text-gray-4">{nav.name}</div>
@@ -57,11 +57,11 @@ const NavBar = () => {
 
 const Header = () => {
   return (
-    <div className="fixed z-20 flex items-center w-screen bg-white h-80">
+    <div className="fixed z-20 flex items-center w-screen bg-white h-50 md:h-80">
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
-            <Image src={Logo} alt="두런두런" className="w-130" />
+            <Image src={Logo} alt="두런두런" className="w-64 md:w-130" />
           </Link>
           <NavBar />
           <NavIcon />
