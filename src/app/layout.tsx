@@ -14,9 +14,12 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: '두런두런',
+  title: { default: '두런두런', template: '두런두런 | %s' },
   description:
     '두런두런은 친구들과 함께 목표를 설정하고 경쟁하는 자기개발 어플리케이션으로, 사용자들은 친구들과 함께 목표를 달성하며 서로에게 도전과 자극을 주고받을 수 있습니다.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -25,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body className={notoSansKr.className}>
+    <html lang="ko-kr" className={notoSansKr.className}>
+      <body>
         <Header />
         {children}
         <Footer />
