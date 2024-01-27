@@ -39,13 +39,13 @@ const NavBar = () => {
   const category = [
     { name: '내 캐릭터 찾기', link: '/character' },
     { name: '고객센터', link: '/customer' },
-    { name: 'About us', link: '/aboutus' },
+    { name: '두런두런 소개', link: '/aboutus' },
     { name: '팀원 모집', link: 'team' },
-    { name: '소셜 로그인', link: 'login' },
+    { name: '로그인', link: 'login' },
   ];
 
   return (
-    <div className="flex-row gap-48 hidden md:flex">
+    <div className="flex-row hidden gap-48 md:flex">
       {category.map((nav, idx) => (
         <Link href={nav.link} key={idx}>
           <div className="text-gray-4">{nav.name}</div>
@@ -73,7 +73,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div className="flex items-center h-360 bg-gray-6">
+    <div className="items-center hidden md:flex h-360 bg-gray-6">
       <div className="inner">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
